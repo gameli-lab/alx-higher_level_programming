@@ -1,2 +1,2 @@
 #!/bin/bash
-python333 main.py
+python3 $PYFILE
