@@ -1,3 +1,6 @@
 #!/usr/bin/python3
 for i in range(100):
-    print("{}".format(i), end=',')
+    if (i == 99):
+        print("{}".format(str(i).zfill(2)), end='\n')
+    else:
+        print("{}".format(str(i).zfill(2)), end=', ')
