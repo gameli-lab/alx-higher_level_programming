@@ -3,4 +3,4 @@ from add_0 import
 a = 1
 b = 2
 c = add(a, b)
-print("{}".format(c))
+print("{} + {} = {}".format(a, b, c))
