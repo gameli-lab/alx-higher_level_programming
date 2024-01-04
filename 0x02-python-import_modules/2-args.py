@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-    def main():
+def main():
     import sys
     num_args = len(sys.argv) - 1
     if num_args == 0:
@@ -12,4 +12,5 @@
             print("{}: {}".format(i, arg))
 
 
-if __name__ == "__main__":                            main():
+if __name__ == "__main__":
+    main():
