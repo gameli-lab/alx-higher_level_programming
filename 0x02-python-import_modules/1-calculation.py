@@ -4,10 +4,10 @@ if __name__ == "__main__":
     a = 10
     b = 5
 
-    p = a + b
-    q = a - b
-    r = a * b
-    s = a / b
+    p = add(a, b)
+    q = sub(a, b)
+    r = mul(a, b)
+    s = div(a, b)
 
     print("{} + {} = {}".format(a, b, p))
     print("{} - {} = {}".format(a, b, q))
