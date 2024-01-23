@@ -2,12 +2,8 @@
 
 class Square:
     """
-    This class defines empty squares
+    This class defines empty squares.
+    It is an empty class definition for now
 
-    Attributes:
-    No attributes for an empty class
-
-    Methods:
-    No methods for an empty class
     """
     pass
