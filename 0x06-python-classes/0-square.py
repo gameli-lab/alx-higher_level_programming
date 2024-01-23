@@ -3,7 +3,7 @@
 class Square:
     """
     This class defines empty squares
-    
+
     Attributes:
     No attributes for an empty class
 
