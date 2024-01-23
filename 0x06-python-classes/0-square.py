@@ -1,8 +1,13 @@
 #!/user/bin/python3
 
 class Square:
-    pass
+    """
+    This class defines empty squares
+    
+    Attributes:
+    No attributes for an empty class
 
-"""
-This class represent squares
-"""
+    Methods:
+    No methods for an empty class
+    """
+    pass
