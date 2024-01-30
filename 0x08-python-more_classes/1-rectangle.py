@@ -12,7 +12,6 @@ class Rectangle:
         self.__width = width
         self.__height = height
 
-
         def width(self):
             """ Getting the width """
             return (self.__width)
@@ -27,7 +26,7 @@ class Rectangle:
 
             def height(self):
                 """ Getting height """
-                return(self.__height)
+                return (self.__height)
 
             def height(self, value):
                 """ Setting height"""
