@@ -7,7 +7,7 @@ This module difines a rectangle
 
 class Rectangle:
     """ This class describes the rectangle """
-    def __init__(self, width = 0, height = 0):
+    def __init__(self, width=0, height=0):
         """ Initializing a rectangle """
         self.__width = width
         self.__height = height
@@ -41,3 +41,13 @@ class Rectangle:
                 if value < 0:
                     raise ValueError("height must be >= 0")
                 self.__height = value
+
+            @property
+            def area(self):
+                """defines an area of a rectangle """
+                return (width * height)
+
+            @property
+            def perimeter(self):
+                """ defines the perimeter of a rectangle """
+                return ((2 * width) + (2 * height))
