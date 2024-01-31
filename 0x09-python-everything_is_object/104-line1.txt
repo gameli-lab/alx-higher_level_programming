@@ -1,1 +1,1 @@
-one int object with the value 1024 is created
+1
