@@ -13,6 +13,19 @@ How to Use 0-add_integer.py
 >>> add_integer(3.5, 2.5)
 5
 
+>>> add_integer(3, 2.5)
+5
+
+>>> add_integer(3, "kofi")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+>>> add_integer(None)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
 >>> add_integer("John", "Doe")
 Traceback (most recent call last):
     ...
