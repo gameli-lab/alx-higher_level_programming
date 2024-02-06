@@ -4,4 +4,4 @@ import json
 
 def to_json_string(my_obj):
     """This finction returns json rep of obj"""
-    print(json.dumps(my_obj)
+    print(json.dumps(my_obj))
