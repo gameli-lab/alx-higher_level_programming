@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''this module find inheritance'''
+"""this is the documentation for this module. it's defines a functionthat finds inheritance of any form"""
 
 
 def inherits_from(obj, a_class):
