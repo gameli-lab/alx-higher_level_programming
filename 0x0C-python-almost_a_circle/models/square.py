@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+'''This is the module documentation'''
+
 from models.rectangle import Rectangle
 
 
