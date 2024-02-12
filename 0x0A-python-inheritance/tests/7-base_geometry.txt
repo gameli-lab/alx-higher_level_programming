@@ -1,0 +1,30 @@
+# Create an instance of BaseGeometry
+geometry = BaseGeometry()
+
+# Test case 1: Valid integer
+try:
+    geometry.integer_validator("test_int", 10)
+    print("Test case 1 passed")
+except Exception as e:
+    print("Test case 1 failed:", e)
+
+# Test case 2: Valid integer (edge case: 0)
+try:
+    geometry.integer_validator("test_int", 0)
+    print("Test case 2 passed")
+except Exception as e:
+    print("Test case 2 failed:", e)
+
+# Test case 3: Invalid type (not an integer)
+try:
+    geometry.integer_validator("test_int", "not_an_integer")
+    print("Test case 3 failed")
+except TypeError as e:
+    print("Test case 3 passed:", e)
+
+# Test case 4: Invalid value (less than 0)
+try:
+    geometry.integer_validator("test_int", -5)
+    print("Test case 4 failed")
+except ValueError as e:
+    print("Test case 4 passed:", e)
