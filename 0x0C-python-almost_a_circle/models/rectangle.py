@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-from models.base import Base
+
 '''This module defines a base class'''
+
+from models.base import Base
 
 
 class Rectangle(Base):
