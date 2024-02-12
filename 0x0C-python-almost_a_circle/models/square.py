@@ -11,9 +11,10 @@ class Square(Rectangle):
 
     def __str__(self):
         '''Returns the string rep'''
-        return ("[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width))
+        return ("[Square] ({}) {}/{} - {}".format(self.id,
+                self.x, self.y, self.width))
 
-    #getter and seter methods for size
+    # getter and seter methods for size
     @property
     def size(self):
         '''returns the value of size'''
@@ -49,8 +50,8 @@ class Square(Rectangle):
     def to_dictionary(self):
         '''This returns the dictionary rep of the square'''
         return ({
-            "id":self.id,
-            "size":self.width,
-            "x":self.x,
-            "y":self.y
+            "id": self.id,
+            "size": self.width,
+            "x": self.x,
+            "y": self.y
             })

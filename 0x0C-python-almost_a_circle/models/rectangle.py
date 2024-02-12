@@ -12,7 +12,7 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
 
-    #getter and setter methods for width
+    # getter and setter methods for width
     @property
     def width(self):
         return (self.__width)
@@ -25,7 +25,7 @@ class Rectangle(Base):
             raise ValueError("width must be > 0")
         self.__width = value
 
-    #getter and setter methods for height
+    # getter and setter methods for height
     @property
     def height(self):
         return (self.__height)
@@ -38,7 +38,7 @@ class Rectangle(Base):
             raise ValueError("height must be > 0")
         self.__height = value
 
-    #getter and setter methods for x
+    # getter and setter methods for x
     @property
     def x(self):
         return (self.__x)
@@ -51,7 +51,7 @@ class Rectangle(Base):
             raise ValueError("x must be >= 0")
         self.__x = value
 
-    #getter and setter methods for y
+    # getter and setter methods for y
     @property
     def y(self):
         return (self.__y)
@@ -64,13 +64,12 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
-
-    #method for area of the rectangle
+    # method for area of the rectangle
     def area(self):
         '''This method calculates the area of the rectangle'''
         return (self.__width * self.__height)
 
-    #printing the rectangle with #
+    # printing the rectangle with #
     def display(self):
         '''Prints the rectangle with  pound'''
         for i in range(self.__y):
@@ -78,13 +77,13 @@ class Rectangle(Base):
         for _ in range(self.__height):
             print(' ' * self.__x + '#' * self.__width)
 
-    #string representation of the rectangle
+    # string representation of the rectangle
     def __str__(self):
         '''Preints the string rep of the rectangle'''
-        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, \
-            self.__x, self.__y, self.__width, self.__height))
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                self.__x, self.__y, self.__width, self.__height))
 
-    #adding updater
+    # adding updater
     def update(self, *args, **kwargs):
         '''This method updates each attribute with both args and kwargs'''
         if args:
@@ -92,7 +91,7 @@ class Rectangle(Base):
                 self.id = args[0]
             if len(args) >= 2:
                 self.__width = args[1]
-            if len(args) >=3:
+            if len(args) >= 3:
                 self.__height = args[2]
             if len(args) >= 4:
                 self.__x = args[3]
@@ -114,9 +113,9 @@ class Rectangle(Base):
     def to_dictionary(self):
         '''This defines a dictionary rep of the rectangle'''
         return ({
-            "id":self.id,
-            "width":self.__width,
-            "height":self.__height,
-            "x":self.__x,
-            "y":self.__y
+            "id": self.id,
+            "width": self.__width,
+            "height": self.__height,
+            "x": self.__x,
+            "y": self.__y
             })
