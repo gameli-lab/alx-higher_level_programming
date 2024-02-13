@@ -32,7 +32,8 @@ class Base:
 
         gameli = cls.__name__ + ".json"
         with open(gameli, "w") as file:
-            json_str = cls.to_json_string([obj.to_dictionary() for obj in list_objs])
+            json_str = cls.to_json_string([obj.to_dictionary()
+                                            for obj in list_objs])
             file.write(json_str)
 
     @staticmethod
@@ -58,7 +59,7 @@ class Base:
         elif cls.__name__ == "Square":
             dummy_instance = cls(1)
 
-        dummy_instance.update(**dictionary) 
+        dummy_instance.update(**dictionary)
         return (dummy_instance)
 
     @classmethod
