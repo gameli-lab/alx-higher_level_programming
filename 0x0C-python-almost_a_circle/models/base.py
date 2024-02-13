@@ -33,7 +33,7 @@ class Base:
         gameli = cls.__name__ + ".json"
         with open(gameli, "w") as file:
             json_str = cls.to_json_string([obj.to_dictionary()
-                                            for obj in list_objs])
+                                          for obj in list_objs])
             file.write(json_str)
 
     @staticmethod
@@ -74,3 +74,29 @@ class Base:
                 return ([cls.create(**dictionary) for dictionary in dicts])
         except FileNotFoundError:
             return ([])
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        Deserialize instances from CSV format and return a list of instances.
+
+        Returns:
+            list: List of instances loaded from the file.
+        """
+        filename = cls.__name__ + ".csv"
+        try:
+            with open(filename, "r") as file:
+                instances = []
+                for line in file:
+                    data = line.strip().split(',')
+                    if cls.__name__ == "Rectangle":
+                        instance = cls(int(data[1]), int(data[2]),
+                                       int(data[3]), int(data[4]),
+                                       int(data[0]))
+                    elif cls.__name__ == "Square":
+                        instance = cls(int(data[1]), int(data[2]),
+                                       int(data[3]), int(data[0]))
+                    instances.append(instance)
+                return instances
+        except FileNotFoundError:
+            return []
