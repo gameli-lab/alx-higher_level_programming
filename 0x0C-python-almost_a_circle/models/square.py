@@ -6,7 +6,7 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    '''This calss is a class which i herits from the rectangle class'''
+    '''This calss is a class which inherits from the rectangle class'''
     def __init__(self, size, x=0, y=0, id=None):
         '''This method initialiases the class'''
         super().__init__(size, size, x, y, id)
@@ -29,6 +29,7 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
+        '''This method updates the class with both args and kwargs'''
         if args:
             if len(args) >= 1:
                 self.id = args[0]
