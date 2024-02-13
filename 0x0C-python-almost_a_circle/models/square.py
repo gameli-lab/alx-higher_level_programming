@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-'''This is the module documentation'''
+
+'''This module defines a class that inherits from the rectangle class'''
+
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    '''This is a square class'''
+    '''This calss is a class which i herits from the rectangle class'''
     def __init__(self, size, x=0, y=0, id=None):
         '''This method initialiases the class'''
         super().__init__(size, size, x, y, id)
