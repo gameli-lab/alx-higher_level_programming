@@ -103,14 +103,14 @@ class Base:
         '''
         Serialises instances from CSV format
         '''
-    if list_objs is None:
-        return ([])
+        if list_objs is None:
+            return ([])
 
-    gameli = cls.__name__ + ".csv"
-    with open(gameli, "w") as torfu:
-        for obj in list_objs:
-            csv_line = cls.to_csv_string(obj)
-            torfu.write(csv_line + '\n')
+        gameli = cls.__name__ + ".csv"
+        with open(gameli, "w") as torfu:
+            for obj in list_objs:
+                csv_line = cls.to_csv_string(obj)
+                torfu.write(csv_line + '\n')
 
     @classmethod
     def load_from_file_csv(cls):
@@ -118,20 +118,20 @@ class Base:
        Deserialize instances from CSV format and return a list of instances.
         '''
 
-    gameli = cls.__name__ + ".csv"
-    try:
-        with open(gameli, "r") as torfu:
-            instances = []
-            for line in torfu:
-                data = line.strip().split(',')
-                if cls.__name__ == "Rectangle":
-                    instance = cls(int(data[1]), int(data[2]),
-                                   int(data[3]), int(data[4]),
-                                   int(data[0]))
-                elif cls.__name__ == "Square":
-                    instance = cls(int(data[1]), int(data[2]),
-                                   int(data[3]), int(data[0]))
-                instances.append(instance)
-            return instances
-    except FileNotFoundError:
-        return []
+        gameli = cls.__name__ + ".csv"
+        try:
+            with open(gameli, "r") as torfu:
+                instances = []
+                for line in torfu:
+                    data = line.strip().split(',')
+                    if cls.__name__ == "Rectangle":
+                        instance = cls(int(data[1]), int(data[2]),
+                                       int(data[3]), int(data[4]),
+                                       int(data[0]))
+                    elif cls.__name__ == "Square":
+                        instance = cls(int(data[1]), int(data[2]),
+                                       int(data[3]), int(data[0]))
+                    instances.append(instance)
+                return instances
+        except FileNotFoundError:
+            return []
