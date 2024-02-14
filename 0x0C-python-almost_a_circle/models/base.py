@@ -97,7 +97,7 @@ class Base:
             return "{},{},{},{},{}".format(inst.id, inst.width, inst.height,
                                            inst.x, inst.y)
         elif isinstance(inst, Square):
-            return "{},{},{},{}".format(inst.id, inst.size, inst.x, inst.y)"""
+            return "{},{},{},{}".format(inst.id, inst.size, inst.x, inst.y)
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
@@ -111,7 +111,7 @@ class Base:
     with open(gameli, "w") as torfu:
         for obj in list_objs:
             csv+line = cls.to_csv_string(obj)
-            torfu.write(csv_line + '\n')
+            torfu.write(csv_line + '\n')"""
 
     @classmethod
     def load_from_file_csv(cls):
