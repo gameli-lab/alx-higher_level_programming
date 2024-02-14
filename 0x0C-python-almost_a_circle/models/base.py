@@ -70,7 +70,7 @@ class Base:
         try:
             with open(gameli, "r") as torfu:
                 json_str = torfu.read()
-                dicts = from_json_string(json_str)
+                dicts = cls.from_json_string(json_str)
                 return ([cls.create(**dictionary) for dictionary in dicts])
         except FileNotFoundError:
             return ([])
