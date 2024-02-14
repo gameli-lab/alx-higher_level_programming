@@ -77,15 +77,8 @@ class Base:
 
     @staticmethod
     def to_csv_string(inst):
-        """
-        Convert an instance to CSV format.
+        ''' Convert an instance to CSV format.'''
 
-        Args:
-            instance (object): Instance to be converted.
-
-        Returns:
-            str: CSV representation of the instance.
-        """
         if isinstance(inst, Rectangle):
             return "{},{},{},{},{}".format(inst.id, inst.width, inst.height,
                                            inst.x, inst.y)
@@ -106,17 +99,13 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        """
-        Deserialize instances from CSV format and return a list of instances.
+       '''Deserialize instances from CSV format and return a list of instances.'''
 
-        Returns:
-            list: List of instances loaded from the file.
-        """
-        filename = cls.__name__ + ".csv"
+        gameli = cls.__name__ + ".csv"
         try:
-            with open(filename, "r") as file:
+            with open(gameli, "r") as torfu:
                 instances = []
-                for line in file:
+                for line in torfu:
                     data = line.strip().split(',')
                     if cls.__name__ == "Rectangle":
                         instance = cls(int(data[1]), int(data[2]),
