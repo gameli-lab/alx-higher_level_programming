@@ -109,7 +109,7 @@ class Base:
     gameli = cls.__name__ + ".csv"
     with open(gameli, "w") as torfu:
         for obj in list_objs:
-            csv+line = cls.to_csv_string(obj)
+            csv_line = cls.to_csv_string(obj)
             torfu.write(csv_line + '\n')
 
     @classmethod
