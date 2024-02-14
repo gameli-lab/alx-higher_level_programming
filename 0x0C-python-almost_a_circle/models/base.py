@@ -75,6 +75,35 @@ class Base:
         except FileNotFoundError:
             return ([])
 
+    @staticmethod
+    def to_csv_string(inst):
+        """
+        Convert an instance to CSV format.
+
+        Args:
+            instance (object): Instance to be converted.
+
+        Returns:
+            str: CSV representation of the instance.
+        """
+        if isinstance(inst, Rectangle):
+            return "{},{},{},{},{}".format(inst.id, inst.width, inst.height,
+                                           inst.x, inst.y)
+        elif isinstance(inst, Square):
+            return "{},{},{},{}".format(inst.id, inst.size, inst.x, inst.y)
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        '''Serialises instances from CSV format '''
+    if list_objs is None:
+        return ([])
+
+    gameli = cls.__name__ + ".csv"
+    with open(gameli, "w") as torfu:
+        for obj in list_objs:
+            csv+line = cls.to_csv_string(obj)
+            torfu.write(csv_line + '\n')
+
     @classmethod
     def load_from_file_csv(cls):
         """
