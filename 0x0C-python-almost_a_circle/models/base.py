@@ -6,7 +6,7 @@ This module defines a base class
 
 import json
 
-
+"""
 class Base:
     '''
     This is the definition of the base class
@@ -18,7 +18,7 @@ class Base:
             self.id = id
         else:
             type(self).__nb_objects += 1
-            self.id = type(self).__nb_objects"""
+            self.id = type(self).__nb_objects
 
     @staticmethod
     def to_json_string(list_dictionaries):
