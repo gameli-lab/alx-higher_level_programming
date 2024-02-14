@@ -89,7 +89,7 @@ class Base:
 
     @staticmethod
     def to_csv_string(inst):
-        '''
+        """'''
         Convert an instance to CSV format.
         '''
 
@@ -97,7 +97,7 @@ class Base:
             return "{},{},{},{},{}".format(inst.id, inst.width, inst.height,
                                            inst.x, inst.y)
         elif isinstance(inst, Square):
-            return "{},{},{},{}".format(inst.id, inst.size, inst.x, inst.y)
+            return "{},{},{},{}".format(inst.id, inst.size, inst.x, inst.y)"""
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
