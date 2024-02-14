@@ -1,12 +1,16 @@
 #!/usr/bin/python3
 
-'''This module defines a base class'''
+'''
+This module defines a base class
+'''
 
 import json
 
 
 class Base:
-    '''This is the base class'''
+    '''
+    This is the definition of the base class
+    '''
     __nb_objects = 0
 
     def __init__(self, id=None):
@@ -18,7 +22,9 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        '''returns the JSON string representation'''
+        '''
+        returns the JSON string representation
+        '''
         if list_dictionaries is None:
             return ("[]")
         else:
@@ -26,7 +32,9 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        '''writes the JSON string representation'''
+        '''
+        writes the JSON string representation
+        '''
         if list_objs is None:
             return ([])
 
@@ -38,7 +46,9 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        '''returns the list of the JSON string representation'''
+        '''
+        returns the list of the JSON string representation
+        '''
         if json_string is None:
             json_string = []
 
@@ -64,7 +74,9 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        '''returns a list of instances'''
+        '''
+        returns a list of instances
+        '''
         gameli = cls.__name__ + ".json"
 
         try:
@@ -77,7 +89,9 @@ class Base:
 
     @staticmethod
     def to_csv_string(inst):
-        ''' Convert an instance to CSV format.'''
+        '''
+        Convert an instance to CSV format.
+        '''
 
         if isinstance(inst, Rectangle):
             return "{},{},{},{},{}".format(inst.id, inst.width, inst.height,
@@ -87,7 +101,9 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        '''Serialises instances from CSV format '''
+        '''
+        Serialises instances from CSV format
+        '''
     if list_objs is None:
         return ([])
 
@@ -99,7 +115,9 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-       '''Deserialize instances from CSV format and return a list of instances.'''
+       '''
+       Deserialize instances from CSV format and return a list of instances.
+       '''
 
         gameli = cls.__name__ + ".csv"
         try:
