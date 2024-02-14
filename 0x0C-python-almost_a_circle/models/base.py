@@ -8,7 +8,7 @@ import json
 
 
 class Base:
-    """'''
+    '''
     This is the definition of the base class
     '''
     __nb_objects = 0
@@ -135,4 +135,4 @@ class Base:
                     instances.append(instance)
                 return instances
         except FileNotFoundError:
-            return []"""
+            return []
