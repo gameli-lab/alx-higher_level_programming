@@ -84,7 +84,7 @@ class Base:
                 dicts = cls.from_json_string(json_str)
                 return ([cls.create(**dictionary) for dictionary in dicts])
         except FileNotFoundError:
-            return ([])"""
+            return ([])
 
     @staticmethod
     def to_csv_string(inst):
@@ -134,4 +134,4 @@ class Base:
                     instances.append(instance)
                 return instances
         except FileNotFoundError:
-            return []"""
+            return []
