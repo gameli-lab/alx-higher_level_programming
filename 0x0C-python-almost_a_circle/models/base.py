@@ -3,10 +3,10 @@
 '''
 This module defines a base class
 '''
-
+"""
 import json
 
-"""
+
 class Base:
     '''
     This is the definition of the base class
