@@ -3,7 +3,6 @@
 '''
 This module defines a base class
 '''
-"""
 import json
 
 
@@ -19,7 +18,7 @@ class Base:
         else:
             type(self).__nb_objects += 1
             self.id = type(self).__nb_objects
-
+"""
     @staticmethod
     def to_json_string(list_dictionaries):
         '''
@@ -111,7 +110,7 @@ class Base:
     with open(gameli, "w") as torfu:
         for obj in list_objs:
             csv+line = cls.to_csv_string(obj)
-            torfu.write(csv_line + '\n')"""
+            torfu.write(csv_line + '\n')
 
     @classmethod
     def load_from_file_csv(cls):
