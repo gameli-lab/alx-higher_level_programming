@@ -1,10 +1,10 @@
 --This is a Write a script that creates the MySQL server user user_0d_1.
 
-CREATE USER IF NOT EXIST 'user_0d_1'@'localhost' IDENTIFIED BY 'user_0d_pwd';
+"CREATE USER IF NOT EXIST 'user_0d_1'@'localhost' IDENTIFIED BY 'user_0d_pwd';"
 
 --Grant all priveleges
-GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost' WITH GRANT OPTION;
+"GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost' WITH GRANT OPTION;"
 
-FLUSH PRIVILEGES;
+"FLUSH PRIVILEGES;"
 
-EXIT;
+"EXIT;"
