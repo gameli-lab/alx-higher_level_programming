@@ -1,5 +1,6 @@
 #!/usr/bin/node
-
-console.log('C is fun');
-console.log('Python is cool');
-console.log('Javascript is amazing');
+/*
+const c = 'C is fun';
+const p = 'Python is cool';
+const j = 'Javascript is amazing'; */
+console.log('C is fun\nPython is cool\nJavascript is amazing');
