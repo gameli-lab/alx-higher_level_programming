@@ -1,9 +1,13 @@
-#!/usr/bin/python3
+#!/usr/bin/python3i
+''' This is mysqldb module'''
+
 import MYSQLdb
 
 
 def list_states(username, password, database_name):
-
+'''
+This module lists all states in asc order
+'''
 db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=databasename)
 
 cursor = db.cursor()
