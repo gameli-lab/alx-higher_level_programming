@@ -1,1 +1,0 @@
-MYSQLdb, SQLAlchamy project
