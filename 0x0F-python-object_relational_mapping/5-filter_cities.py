@@ -12,7 +12,9 @@ if __name__ == "__main__":
     inp = argv[4]
     cur = db.cursor()
 
-    query = "SELECT cities.name AS city_name FROM cities JOIN states ON cities.state_id=states.id WHERE states.name=%s ORDER BY cities.id ASC"
+    query = "SELECT cities.name AS city_name FROM cities JOIN states\
+            ON cities.state_id=states.id WHERE states.name=%s ORDER BY\
+            cities.id ASC"
 
     cur.execute(query, (inp,))
     rows = cur.fetchall()
