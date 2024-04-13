@@ -2,7 +2,7 @@
 
 ''' This is mysqldb module'''
 
-from sqlalchemy import * '''Column, Integer, String, create_engine'''
+from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sys import argv
 
