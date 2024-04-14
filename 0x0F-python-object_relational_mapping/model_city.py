@@ -2,17 +2,16 @@
 
 ''' This is mysqldb module'''
 
-from sqlalchemy import Column, Integer, String, create_engine
+from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from model_state import Base
-from sys import argv
 
 Base = declarative_base()
 
 
 class City(Base):
     '''
-    States inherits from Base
+    City inherits from Base
     '''
     __tablename__ = 'cities'
 
@@ -20,4 +19,4 @@ class City(Base):
                 nullable=False)
     name = Column(String(128), nullable=False)
 
-    state_id = Column(Integer,foreign_key=states.id, nullable=False)
+    state_id = Column(Integer,ForeignKey('state.id'), nullable=False)
