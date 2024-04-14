@@ -20,10 +20,9 @@ if __name__ == "__main__":
     dbs = sessionmaker(bind=engine)
     session = dbs()
 
-    states = session.query(State).order_by(State.id.asc()).all()
+    state = session.query(State).order_by(State.id.asc()).first()
 
-    for i, state in enumerate(states, start=1):
-        if (i == 1):
-            print('{}: {}'.format(i, state.name))
+    if state:
+        print('{}: {}'.format(1, state.name))
 
     session.close()
