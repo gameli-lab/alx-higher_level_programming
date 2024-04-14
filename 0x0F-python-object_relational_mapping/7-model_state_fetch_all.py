@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
     states = session.query(State).order_by(State.id.asc()).all()
 
-    for state in states:
-        print(state.name)
+    for i,state in enumerate(states, start=1):
+        print('{}: {}'.format(i, state.name))
 
     session.close()
