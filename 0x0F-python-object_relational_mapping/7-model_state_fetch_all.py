@@ -14,8 +14,8 @@ if __name__ == "__main__":
     This module lists all states in asc order
     '''
 
-    engine = create_engine("mysql://{}:{}@localhost:3306/{}".format(argv[1],
-                                                                    argv[2], argv[3]))
+    engine = create_engine("mysql://{}:{}@localhost:3306/{}"
+                           .format(argv[1], argv[2], argv[3]))
     Base.metadata.bind = engine
     dbs = sessionmaker(bind=engine)
     session = dbs()
