@@ -21,16 +21,13 @@ if __name__ == "__main__":
     dbs = sessionmaker(bind=engine)
     session = dbs()
 
-
     cities = (session.query(State.name, City.id, City.name)
               .select_from(State)
               .join(City, State.id == City.state_id)
               .order_by(City.id.asc())
               .all())
 
-
     for state_name, city_id, city_name in cities:
-        print('{}: {}'.format(state_name, city_id, city_name))
-
+        print('{}: ({}) {}'.format(state_name, city_id, city_name))
 
     session.close()
