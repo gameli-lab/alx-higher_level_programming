@@ -13,7 +13,7 @@ if __name__ == "__main__":
 Base = declarative_base()
 
 
-class States(Base):
+class State(Base):
     '''
     States inherits from Base
     '''
