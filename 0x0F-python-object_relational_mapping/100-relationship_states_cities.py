@@ -22,9 +22,12 @@ if __name__ == "__main__":
     session = dbs()
 
     cal = State(name='California')
+    session.add(cal)
+    session.commit()
+
     san = City(name='San Fransisco', state=cal)
 
-    session.add(cal)
     session.add(san)
     session.commit()
+
     session.close()
