@@ -1,3 +1,3 @@
 #!/bin/bash
 # Body status
-curl -s -o /dev/null -w ${http-status} "$1"
+curl -s -o /dev/null -w "%{http_code}" $1
