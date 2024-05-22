@@ -12,6 +12,5 @@ request.get(url, (error, response, body) => {
   } else {
     const data = JSON.parse(body);
     console.log(data.title);
-    console.log('\n');
   }
 });
